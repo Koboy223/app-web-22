@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>menu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="Scrips/menu-loader.js"></script>
+<link rel="stylesheet" href="Stylos/stylos.css">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000076;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px ;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.624); /* Desplazamiento horizontal, Desplazamiento vertical, Radio de desenfoque, Radio de propagación, Color */
+}
+
+
+
+.menu-item {
+    color: rgba(255, 255, 255, 0.807);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    margin: 0;
+    padding: 9px 10px; /* Ajuste del padding vertical a 8px y ancho horizontal a 20px */
+    position: relative;
+}
+
+.menu-item .menu-bar {
+    margin-top: 10px; /* Añade espacio entre la barra y el texto */
+    width: 100%;
+    height: 3px;
+    background-color: #00ffff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-item.active {
+    color: #00ffff; /* Cambiar color al presionar */
+   
+}
+
+.menu-item:hover{
+  background-color: #c2c1c168;
+  border-radius: 100px;
+}
+
+.menu-item.active .menu-bar {
+    transform: translateX(-50%) scaleX(1);
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="noticias"></div>
+</div>
+<div class="menu">
+  <a href="inicio.html" class="menu-item" onclick="handleClick(this, 'inicio.html')">
+    <i class="fas fa-home"></i>
+    Inicio
+    <div class="menu-bar"></div>
+  </a>
+  <a href="buscar.html" class="menu-item" onclick="handleClick(this, 'buscar.html')">
+    <i class="fas fa-search"></i>
+    Buscar
+    <div class="menu-bar"></div>
+  </a>
+  <a href="añadir.html" class="menu-item" onclick="handleClick(this, 'añadir.html')">
+    <i class="fas fa-plus"></i>
+    Agregar
+    <div class="menu-bar"></div>
+  </a>
+  <a href="favoritos.html" class="menu-item" onclick="handleClick(this, 'favoritos.html')">
+    <i class="fas fa-heart"></i>
+    Favoritos
+    <div class="menu-bar"></div>
+  </a>
+  <a href="perfil.html" class="menu-item" onclick="handleClick(this, 'perfil.html')">
+    <i class="fas fa-user"></i>
+    Perfil
+    <div class="menu-bar"></div>
+  </a>
+</div>
+
+<script>
+function handleClick(element, url) {
+    setActive(element);
+    cargarPagina(url);
+}
+
+function setActive(element) {
+    var menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(function(item) {
+        item.classList.remove("active");
+    });
+
+    element.classList.add("active");
+}
+
+function cargarPagina(url) {
+    fetch(url)
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('contenido').innerHTML = data;
+    })
+    .catch(error => console.error('Error al cargar la página', error));
+}
+
+</script>
+
+</body>
+</html>

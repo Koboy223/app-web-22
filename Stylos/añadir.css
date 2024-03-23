@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    
+}
+
+#naruto {
+    display: block;
+    margin: auto;
+    border-radius: 9px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	width: 500px;
+    margin-top: 50px;
+    
+
+}
+h1{
+    text-align: center;
+}
+

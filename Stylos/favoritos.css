@@ -1,0 +1,111 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;  
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3); /* Sombra en el texto */
+}
+
+.glide {
+    max-width: 800px;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+   
+  
+}
+
+.glide__slide {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+    transition: transform 0.3s ease;
+   
+}
+
+.glide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    
+   
+}
+
+.glide__slide img:hover {
+    transform: scale(1.05);
+    filter: brightness(110%); /* Aumentar el brillo al hacer hover */
+}
+
+.glide__slide:nth-child(odd) {
+    background-color: #f9f9f9; /* Fondo alternativo para slides impares */
+}
+
+.glide__slide:nth-child(even) {
+    background-color: #e9e9e9; /* Fondo alternativo para slides pares */
+}
+
+.glide__arrow,
+.glide__bullet {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para las flechas e indicadores */
+    color: #333; /* Color del texto de las flechas e indicadores */
+}
+
+.glide__arrow:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Cambiar el color al pasar el ratón sobre las flechas */
+}
+
+.glide__bullet--active {
+    background-color: #333; /* Color del indicador activo */
+}
+
+   /* descripcion de ls imgennes del carusel */
+
+.image-container {
+    position: relative;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-radius: 10px; /* Agrega un borde redondeado a las imágenes */
+    
+   
+}
+
+.image-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  
+}
+
+.image-container:hover .image-description {
+    opacity: 1;
+}

@@ -1,0 +1,48 @@
+
+body.modo-nocturno {
+    background-color: #000000;
+    color: #ffffff88;
+}
+
+
+body.modo-nocturno #searchInput:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 5px 5px 10px rgba(0, 123, 255, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+body.modo-nocturno 
+.menu-item.active {
+    color: #37ff00; /* Cambiar color al presionar */
+   
+}
+
+
+
+body.modo-nocturno .menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000076;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px ;
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.335); /* Desplazamiento horizontal, Desplazamiento vertical, Radio de desenfoque, Radio de propagación, Color */
+}
+
+
+.modo-nocturno
+.menu-item .menu-bar {
+    margin-top: 10px; /* Añade espacio entre la barra y el texto */
+    width: 100%;
+    height: 3px;
+    background-color: #37ff00;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease;
+}

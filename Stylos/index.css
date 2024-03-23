@@ -1,0 +1,28 @@
+/* Estilos para los gifs */
+img[src$=".gif"] {
+    display: block;
+    margin: 10px auto;
+    border-radius: 9px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	width: 200px
+}
+
+/* Estilos para todos los párrafos */
+p {
+    font-size: 50px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Estilos para el encabezado con id "encabezado" */
+#encabezado {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#cabezera img {
+    border-radius: 100px;
+}

@@ -1,0 +1,24 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para dispositivos pequeños (móviles) */
+@media only screen and (max-width: 600px) {
+    /* Aquí puedes agregar estilos específicos para dispositivos móviles */
+    /* Por ejemplo, ajustar el tamaño de texto o el espaciado */
+}
+
+/* Estilos para dispositivos medianos (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Aquí puedes agregar estilos específicos para tablets */
+    /* Por ejemplo, ajustar el tamaño de la fuente o el espaciado */
+}
+
+/* Estilos para dispositivos grandes (escritorios) */
+@media only screen and (min-width: 1025px) {
+    /* Aquí puedes agregar estilos específicos para escritorios */
+    /* Por ejemplo, ajustar el ancho del contenido o el espaciado */
+}

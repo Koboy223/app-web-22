@@ -1,0 +1,173 @@
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0000007e;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+
+
+
+
+  .menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0000007e;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+}
+
+.menu:hover {
+  transform: translateY(-10px); /* Mueve el menú hacia arriba en 10px al pasar el mouse sobre él */
+}
+
+.menu-item {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.1); /* Escala el ícono y el texto al 110% al pasar el mouse sobre el elemento */
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>menu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="Scrips/Menu-loader.js"></script>
+
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+	
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  .noticia {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0000007e;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+}
+
+.menu-item {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.1); /* Escala el ícono y el texto al 110% al pasar el mouse sobre el elemento */
+}
+
+  
+  .menu-item {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+  .menu-item i {
+    margin-bottom: 3px;
+  }
+  
+  .menu-bar {
+  width: 20%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0); /* Oculta la barra al inicio */
+  transition: transform 0.3s ease;
+}
+
+.menu-item:active + .menu-bar {
+  transform: translateX(-50%) scaleX(1); /* Muestra la barra al presionar un botón */
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="noticias"></div>
+</div>
+<div class="menu">
+  <a href="Index.html" class="menu-item">
+    <i class="fas fa-home"></i>
+    Inicio
+  </a>
+  <a href="Buscar.html" class="menu-item">
+    <i class="fas fa-search"></i>
+    Buscar
+  </a>
+  <a href="Añadir.html" class="menu-item">
+    <i class="fas fa-plus"></i>
+    Agregar
+  </a>
+  <a href="Favoritos.html" class="menu-item">
+    <i class="fas fa-heart"></i>
+    Favoritos
+  </a>
+  <a href="Perfil.html" class="menu-item">
+    <i class="fas fa-user"></i>
+    Perfil
+  </a>
+  <div class="menu-bar"></div>
+</div>
+ 
+  
+</body>
+</html>
+
+
