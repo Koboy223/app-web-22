@@ -1,4 +1,4 @@
-new Glide('.glide', {
+/*new Glide('.glide', {
     type: 'carousel',
     perView: 3,
     focusAt: 'center',
@@ -12,6 +12,27 @@ new Glide('.glide', {
         },
         768: {
             perView: 2
+        }
+    }
+}).mount();
+*/
+new Glide('.glide', {
+    type: 'carousel',
+    perView: 3,
+    focusAt: 'center',
+    gap: 10,
+    autoplay: 3000,
+    hoverpause: true,
+    rewind: true,
+    breakpoints: {
+        1024: {
+            perView: 3
+        },
+        768: {
+            perView: 2
+        },
+        480: {
+            perView: 1
         }
     }
 }).mount();
